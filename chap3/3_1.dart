@@ -5,7 +5,7 @@ void main() {
 void stringPlayground() {
   basicStringDeclaration();
   //multiLineStrings();
-  //combiningStrings();
+  combiningStrings();
 }
 
 void basicStringDeclaration() {
@@ -24,4 +24,18 @@ void basicStringDeclaration() {
   final mixAndMatch =
       'Every programmer should write "Hello, World" when learning a new language.';
   print(mixAndMatch);
+}
+
+void combiningStrings() {
+  modernInterpolation();
+}
+
+void modernInterpolation() {
+  final year = 2011;
+  final interpolated = 'Dart was announced in $year';
+  print(interpolated);
+
+  final age = 42;
+  final howOld = 'I am $age ${age == 1 ? 'year' : 'years'} old.';
+  print(howOld);
 }
