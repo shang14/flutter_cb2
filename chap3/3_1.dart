@@ -6,6 +6,7 @@ void stringPlayground() {
   basicStringDeclaration();
   //multiLineStrings();
   combiningStrings();
+  bufferString();
 }
 
 void basicStringDeclaration() {
@@ -38,4 +39,14 @@ void modernInterpolation() {
   final age = 42;
   final howOld = 'I am $age ${age == 1 ? 'year' : 'years'} old.';
   print(howOld);
+}
+
+void bufferString() {
+  List stringLists = ['L1', 'L2', 'L3', 'L4', 'L5'];
+  StringBuffer buffer = StringBuffer();
+  for (String stringList in stringLists) {
+    buffer.write(stringList);
+    buffer.write(' ');
+  }
+  print(buffer.toString());
 }
